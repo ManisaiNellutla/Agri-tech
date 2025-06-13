@@ -1,0 +1,222 @@
+/* 
+.farmerContainer {
+    margin-top: 130px !important;
+    margin-bottom: 30px !important;
+}
+
+.farmer-title {
+    text-align: center;
+    font-size: 22px;
+}
+
+.card-titile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    text-align: center; 
+    font-weight: bold; 
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.btn-explore {
+    margin-bottom: 10px;
+    text-align: center;
+    align-items: center;
+    margin-left: 25% !important;
+    background-color: rgb(0 143 17);
+  }
+    */
+
+/* -----------------------
+   EXPLORE BUTTON
+   ----------------------- */
+/* General Card Style */
+/* -----------------------
+   FARMER CONTAINER 
+   ----------------------- */
+.farmerContainer {
+    margin-top: 130px !important;
+    margin-bottom: 50px !important;
+    padding: 0 20px;
+}
+
+/* -----------------------
+   TYPOGRAPHY
+   ----------------------- */
+.farmer-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2E7D32;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.farmer-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #2E7D32, #8BC34A);
+    border-radius: 2px;
+}
+
+.card-title {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.title {
+    text-align: center; 
+    font-weight: 700; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #424242;
+}
+
+/* -----------------------
+   CARD STYLING
+   ----------------------- */
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: #fff;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #2E7D32, #8BC34A);
+    z-index: 2;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 25px;
+    position: relative;
+}
+
+.card-text {
+    color: #616161;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+/* -----------------------
+   EXPLORE BUTTON (Classic with Enhanced Colors)
+   ----------------------- */
+.btn-explore {
+    background-image: linear-gradient(45deg, #2E7D32, #388E3C);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 15px rgba(46, 125, 50, 0.3);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transform: translateZ(0); /* Fixes positioning during animation */
+}
+
+.btn-explore::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #388E3C, #43A047);
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.btn-explore:hover,
+.btn-explore:focus {
+    color: #fff;
+    transform: translateY(-4px) scale(1.05) translateZ(0); /* Added translateZ(0) */
+    box-shadow: 0 12px 25px rgba(46, 125, 50, 0.4);
+}
+
+.btn-explore:hover::before {
+    left: 0;
+}
+
+.btn-explore:active {
+    transform: translateY(2px) scale(1) translateZ(0); /* Ensures consistent positioning */
+    box-shadow: 0 6px 15px rgba(46, 125, 50, 0.3);
+}
+/* -----------------------
+   RESPONSIVE ADJUSTMENTS
+   ----------------------- */
+@media (max-width: 768px) {
+    .farmerContainer {
+        margin-top: 100px !important;
+    }
+    
+    .farmer-title {
+        font-size: 2rem;
+    }
+    
+    .btn-explore {
+        width: 100%;
+        max-width: 260px;
+    }
+    
+    .card {
+        margin-bottom: 25px;
+    }
+}
+
+/* -----------------------
+   SPECIAL EFFECTS
+   ----------------------- */
+.card:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(46, 125, 50, 0.05));
+    z-index: -1;
+}

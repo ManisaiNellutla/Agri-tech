@@ -1,0 +1,89 @@
+.navbar
+{
+    background-color: #ffffff !important;
+    width: auto;
+    color: rgb(0, 0, 0) !important;
+}
+.nav-cal{
+    width: auto;
+    color: rgb(0, 0, 0) !important;
+    font-size: 18px;
+}
+
+#username, #adminmenu {
+    color: rgb(0, 0, 0) !important;
+    font-size: 16px;
+    
+    
+}
+
+.cart {
+    text-decoration: none !important;
+    margin-left: 0rem !important;
+    font-size: 18px !important;
+    color: rgb(0, 0, 0) !important;
+}
+
+.fa-shopping-cart {
+    margin-right: 20px ;
+    color: rgb(0, 0, 0);
+}
+
+
+ @media only screen and (min-width: 992px) {
+    .navbar {
+        height: 90px;      
+    }
+    .cart {
+        float: right !important;
+        margin-left: 35rem !important;
+        color: rgb(0, 0, 0) !important;
+        font-size: 18px !important;
+        font-size: 18px;
+    }
+    .remove-space {
+        float: right !important;
+        margin-left: 35rem !important;
+        color: rgb(0, 0, 0) !important;
+        font-size: 14px !important;
+    }
+    .nav-cal{
+        margin-left: 10px;
+    }
+} 
+
+
+ @media only screen and (max-width:320px) {
+    .nav-cal{
+        font-size: 15px !important;
+    }
+} 
+  #adminmenu{
+    margin-right: 50px;
+    padding-right: 50px;
+  }
+  .navbar-nav .nav-link.nav-cal {
+  padding: 9px 0;
+  margin: 2 10px;
+  position: relative;
+}
+
+.navbar-nav .nav-link.nav-cal::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #388E3C;
+  transition: all 0.4s ease;
+}
+
+.navbar-nav .nav-link.nav-cal:hover {
+  color: #388E3C !important;
+}
+
+.navbar-nav .nav-link.nav-cal:hover::after {
+  left: 0;
+  width: 100%;
+}
